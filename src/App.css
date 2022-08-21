@@ -1,9 +1,13 @@
 .container {
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.134);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 1rem auto 0;
+  margin: 5rem auto 0;
+  padding: 3rem 0;
+  width: 70vw;
 }
 
 .container_cards {
@@ -118,4 +122,8 @@
 .button_stop:disabled {
   background-color: rgb(185, 185, 185);
   color: #000;
+}
+
+.button_stop:disabled:hover {
+  background-color: rgb(221, 220, 220);
 }
