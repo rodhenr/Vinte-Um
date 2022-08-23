@@ -13,9 +13,7 @@
 
 .container_cards {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: 120px 1fr;
-  width: 100%;
+  grid-template-columns: 140px 220px;
 }
 
 .message {
@@ -41,11 +39,6 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
-  width: 120px;
-}
-
-.card {
-  width: 200px;
 }
 
 .card.end,
@@ -65,7 +58,7 @@
 
 .single_card img,
 .deck img {
-  height: 150px;
+  height: 140px;
 }
 
 .single_card:nth-child(2) {
@@ -133,26 +126,20 @@
 
 @media (min-width: 600px) {
   .container {
-    width: 90vw;
+    width: 95vw;
   }
 
   .container_cards {
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 190px 250px;
   }
 
   .message {
-    font-size: 2rem;
-    width: 600px;
+    font-size: 1.5rem;
   }
 
   .single_card img,
   .deck img {
-    height: 220px;
-  }
-
-  .card,
-  .deck {
-    width: 200px;
+    height: 190px;
   }
 
   .buttons button {
@@ -163,23 +150,19 @@
   }
 }
 
-@media (min-width: 900px) {
-  .container {
-    width: 75vw;
-  }
-
+@media (min-width: 850px) {
   .container_cards {
-    display: flex;
+    grid-template-columns: 220px 270px;
   }
 
   .message {
     font-size: 2rem;
-    width: 600px;
+    width: 75%;
   }
 
   .single_card img,
   .deck img {
-    height: 300px;
+    height: 220px;
   }
 
   .card,

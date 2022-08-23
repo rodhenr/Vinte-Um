@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import pokerCard from "./images/pokerCard.svg";
+import pokerCard from "./images/pokerCard.png";
 import axios from "axios";
 import "./App.css";
 
@@ -105,7 +105,7 @@ function App() {
         </div>
       </div>
 
-      <div className={finalScore > 21 ? "message fail" : "message"}>
+      <div className={finalScore > 21 || finalScore < 18 ? "message fail" : "message"}>
         <p>{gameOver && rules()}</p>
       </div>
 
