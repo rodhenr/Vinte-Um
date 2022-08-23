@@ -177,3 +177,21 @@
     width: 200px;
   }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 900px;
+  }
+
+  .single_card img,
+  .deck img {
+    height: 280px;
+  }
+  
+  .buttons button {
+    font-size: 1.3rem;
+    height: 40px;
+    padding: 0.50rem;
+    width: 230px;
+  }
+}
