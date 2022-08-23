@@ -1,25 +1,28 @@
 .container {
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.134);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 5rem auto 0;
+  overflow: hidden;
   padding: 3rem 0;
-  width: 70vw;
+  width: 95vw;
 }
 
 .container_cards {
-  display: flex;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: 120px 1fr;
+  width: 100%;
 }
 
 .message {
   color: rgb(68, 209, 58);
-  font-size: 2rem;
+  font-size: 1.1rem;
   margin-top: 3rem;
-  width: 600px;
+  width: 90%;
 }
 
 .message.fail {
@@ -37,9 +40,12 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 350px;
   justify-content: center;
-  width: 250px;
+  width: 120px;
+}
+
+.card {
+  width: 200px;
 }
 
 .card.end,
@@ -55,6 +61,11 @@
   left: 0;
   position: absolute;
   top: 0;
+}
+
+.single_card img,
+.deck img {
+  height: 150px;
 }
 
 .single_card:nth-child(2) {
@@ -89,14 +100,6 @@
   top: 45px;
 }
 
-.single_card img {
-  height: 350px;
-}
-
-.deck img {
-  height: 350px;
-}
-
 .buttons {
   display: flex;
   gap: 1rem;
@@ -105,14 +108,14 @@
 .buttons button {
   background-color: rgb(44, 148, 212);
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   font-family: "Anek Telugu", sans-serif;
-  font-size: 1.2rem;
-  height: 35px;
-  padding: 0.45rem;
-  width: 200px;
+  font-size: 1rem;
+  height: 30px;
+  padding: 0.4rem;
+  width: 130px;
 }
 
 .buttons button:hover {
@@ -126,4 +129,68 @@
 
 .button_stop:disabled:hover {
   background-color: rgb(221, 220, 220);
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 90vw;
+  }
+
+  .container_cards {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .message {
+    font-size: 2rem;
+    width: 600px;
+  }
+
+  .single_card img,
+  .deck img {
+    height: 220px;
+  }
+
+  .card,
+  .deck {
+    width: 200px;
+  }
+
+  .buttons button {
+    font-size: 1.2rem;
+    height: 35px;
+    padding: 0.45rem;
+    width: 200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 75vw;
+  }
+
+  .container_cards {
+    display: flex;
+  }
+
+  .message {
+    font-size: 2rem;
+    width: 600px;
+  }
+
+  .single_card img,
+  .deck img {
+    height: 300px;
+  }
+
+  .card,
+  .deck {
+    width: 200px;
+  }
+
+  .buttons button {
+    font-size: 1.2rem;
+    height: 35px;
+    padding: 0.45rem;
+    width: 200px;
+  }
 }
